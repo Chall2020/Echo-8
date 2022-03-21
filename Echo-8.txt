@@ -1,0 +1,50 @@
+======= CH-8 Architecture =======
+
+☰☰☰ INSTRUCTIONS ☰☰☰
+
+0: HLT
+1: A     src 	    → A Reg = src
+2: B     src    	→ B Reg = src
+3: MOV A     	    → A Reg = B Reg
+4: MOV B  	        → B Reg = A Reg
+5: ADD       	    → C Reg = A Reg + B Reg
+6: SUB      	    → C Reg = A Reg - B Reg
+7: AND 	            → C Reg = A Reg && B Reg
+8: OR     	        → C Reg = A Reg || B Reg
+9: NOT  	        → C Reg = !A Reg 
+A: JMP   dest       → [PC] = dest
+B: MOVAC     	    → A Reg = C Reg
+C: MOVBC	   	    → B Reg = D Reg
+D: OUTA      	   	→ O Reg = A Reg
+E: OUTB   	        → O Reg = B Reg
+F: OUTC             → O Reg = C Reg
+
+☰☰☰ INSTRUCTION LAYOUT ☰☰☰
+
+XYY
+
+X = Instruction
+Y = Operands
+
+☰☰☰ REGISTERS ☰☰☰
+
+A   (0) → General Purpose
+B   (1) → General Purpose
+C   (2) → ALU Output
+
+O   (3) → Output Register
+SP  (4) → Stack Pointer
+PC  (5) → Program Counter
+F   (6) → Flags
+	 ↳ Zero
+	 ↳ Equal
+ 
+☰☰☰ MEMORY ☰☰☰
+
+0x0000 ... 0x7FFF: General Purpose ROM
+0x8000 ... 0xFDFF: General Purpose RAM
+0xFC00 ... 0xFEFF: Stack
+0xFF00 ... 0xFFF9: General Purpose RAM
+0xFFFA ... 0xFFFB: Memory Bank
+0xFFFC ... 0xFFFD: Stack Pointer
+0xFFFE ... 0xFFFF: Program Counter
