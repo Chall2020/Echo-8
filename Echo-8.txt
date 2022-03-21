@@ -1,4 +1,4 @@
-======= CH-8 Architecture =======
+======= Echo-8 Architecture =======
 
 ☰☰☰ INSTRUCTIONS ☰☰☰
 
