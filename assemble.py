@@ -69,5 +69,3 @@ def main(file_in, file_out):
 				to_write.append("F00")
 	
 	file_out.write(" ".join(to_write))
-
-main(input("Input File: "), input("Output File: "))
